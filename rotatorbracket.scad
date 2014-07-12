@@ -19,8 +19,10 @@ difference() {
   translate([motorCenterX,-21/2+motorOffsetY,1.7]) cylinder(r = 6.2/2, h = 6);
   translate([motorCenterX,21/2+motorOffsetY,1.7+5.9]) cylinder(r1=6.2/2, r2=0, h = 6); // motor nub conical top (for printability)
   translate([motorCenterX,-21/2+motorOffsetY,1.7+5.9]) cylinder(r1=6.2/2, r2=0, h = 6);
+  #translate([-0.1,blockY/2-2,blockZ]) rotate([-70,0,0]) cube([blockX+0.2,blockY+motorOffsetY,blockZ]);
+  #translate([-0.1,-9,0]) rotate([125,0,0]) cube([blockX+0.2,blockY+motorOffsetY,blockZ]);
 
-  translate([-0.1,-5,13-4]) cube([11.1,12,8.1]); // Vout connector with nothing plugged into it
+  translate([-0.1,-8,13-4]) cube([11.1,16,8.1]); // Vout connector with nothing plugged into it
   translate([-0.1,boardScrewSpacing / 2,13]) rotate([0,90,0]) cylinder(r = screwHoleDia/2, h = 16.2); // screw body hole
   translate([-0.1,-boardScrewSpacing / 2,13]) rotate([0,90,0]) cylinder(r = screwHoleDia/2, h = 16.2);
   translate([10,boardScrewSpacing / 2,13]) rotate([0,90,0]) cylinder(r = screwHeadDia/2, h = 16.2); // screw head clearance
